@@ -28,4 +28,4 @@ jobs:
 
 
       - name: Dry run Cargo Publish
-        run: CARGO_REGISTRY_TOKEN=${{ secrets.CARGO_PUBLISH }} cargo publish --dry-run
+        run: CARGO_REGISTRY_TOKEN=${{ secrets.CARGO_PUBLISH }} cargo publish
