@@ -19,7 +19,7 @@ exclude = [
 
 
 [lib]
-name = "numaflow"
+name = "deleteme_numaflow_rs"
 path = "src/lib.rs"
 
 [dependencies]
