@@ -1,6 +1,6 @@
 [package]
-name = "numaflow"
-version = "0.1.1"
+name = "deleteme-numaflow-rs"
+version = "0.0.1"
 edition = "2021"
 rust-version = "1.80"
 description = "Rust SDK for Numaflow"
@@ -9,8 +9,6 @@ license = "Apache-2.0"
 readme = "README.md"
 homepage = "https://numaproj.github.io/numaflow/"
 repository = "https://github.com/numaproj/numaflow-rs"
-keywords = ["numaflow", "streaming", "messaging", "event-driven"]
-categories = ["network-programming", "api-bindings"]
 exclude = [
     ".github/*",
     ".gitignore",
