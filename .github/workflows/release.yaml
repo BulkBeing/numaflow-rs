@@ -1,11 +1,8 @@
 name: Release
 
 on:
-  push:
-    tags:
-      - '*'
-    branches:
-      - dev-release-*
+  release:
+    types: [ created ]
 
 defaults:
   run:
