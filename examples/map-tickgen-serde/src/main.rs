@@ -1,6 +1,6 @@
 use chrono::{SecondsFormat, TimeZone, Utc};
-use numaflow::map;
-use numaflow::map::Message;
+use deleteme_numaflow_rs::map;
+use deleteme_numaflow_rs::map::Message;
 use serde::Serialize;
 
 #[tokio::main]

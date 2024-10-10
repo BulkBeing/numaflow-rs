@@ -40,7 +40,7 @@ pub trait ReducerCreator {
     /// `MyReducerCreator` creates instances of `MyReducer`, which is a type that implements the `Reducer` trait.
     ///
     /// ```rust
-    /// use numaflow::reduce::{Reducer, ReducerCreator, ReduceRequest, Metadata, Message};
+    /// use deleteme_numaflow_rs::reduce::{Reducer, ReducerCreator, ReduceRequest, Metadata, Message};
     /// use tokio::sync::mpsc::Receiver;
     /// use tonic::async_trait;
     ///
@@ -86,7 +86,7 @@ pub trait Reducer {
     /// Below is a reduce code to count the number of elements for a given set of keys and window.
     ///
     /// ```no_run
-    /// use numaflow::reduce;
+    /// use deleteme_numaflow_rs::reduce;
     ///
     /// #[tokio::main]
     /// async fn main() -> Result<(), Box<dyn std::error::Error + Send + Sync>> {
@@ -95,16 +95,16 @@ pub trait Reducer {
     ///     Ok(())
     /// }
     /// mod counter {
-    ///     use numaflow::reduce::{Message, ReduceRequest};
-    ///     use numaflow::reduce::{Reducer, Metadata};
+    ///     use deleteme_numaflow_rs::reduce::{Message, ReduceRequest};
+    ///     use deleteme_numaflow_rs::reduce::{Reducer, Metadata};
     ///     use tokio::sync::mpsc::Receiver;
     ///     use tonic::async_trait;
-    ///     use numaflow::reduce::proto::reduce_server::Reduce;
+    ///     use deleteme_numaflow_rs::reduce::proto::reduce_server::Reduce;
     ///     pub(crate) struct Counter {}
     ///
     ///     pub(crate) struct CounterCreator {}
     ///
-    ///    impl numaflow::reduce::ReducerCreator for CounterCreator {
+    ///    impl deleteme_numaflow_rs::reduce::ReducerCreator for CounterCreator {
     ///        type R = Counter;
     ///
     ///        fn create(&self) -> Self::R {
@@ -200,7 +200,7 @@ impl Message {
     /// # Examples
     ///
     /// ```
-    /// use numaflow::reduce::Message;
+    /// use deleteme_numaflow_rs::reduce::Message;
     /// let message = Message::new(vec![1, 2, 3, 4]);
     /// ```
     pub fn new(value: Vec<u8>) -> Self {
@@ -215,7 +215,7 @@ impl Message {
     /// # Examples
     ///
     /// ```
-    /// use numaflow::reduce::Message;
+    /// use deleteme_numaflow_rs::reduce::Message;
     /// let dropped_message = Message::message_to_drop();
     /// ```
     pub fn message_to_drop() -> crate::map::Message {
@@ -235,7 +235,7 @@ impl Message {
     /// # Examples
     ///
     /// ```
-    ///  use numaflow::reduce::Message;
+    ///  use deleteme_numaflow_rs::reduce::Message;
     /// let message = Message::new(vec![1, 2, 3]).keys(vec!["key1".to_string(), "key2".to_string()]);
     /// ```
     pub fn keys(mut self, keys: Vec<String>) -> Self {
@@ -252,7 +252,7 @@ impl Message {
     /// # Examples
     ///
     /// ```
-    ///  use numaflow::reduce::Message;
+    ///  use deleteme_numaflow_rs::reduce::Message;
     /// let message = Message::new(vec![1, 2, 3]).tags(vec!["tag1".to_string(), "tag2".to_string()]);
     /// ```
 
@@ -270,7 +270,7 @@ impl Message {
     /// # Examples
     ///
     /// ```
-    /// use numaflow::reduce::Message;
+    /// use deleteme_numaflow_rs::reduce::Message;
     /// let message = Message::new(vec![1, 2, 3]).value(vec![4, 5, 6]);
     /// ```
     pub fn value(mut self, value: Vec<u8>) -> Self {

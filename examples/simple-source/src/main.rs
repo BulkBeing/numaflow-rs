@@ -3,7 +3,9 @@
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error + Send + Sync>> {
     let source_handle = simple_source::SimpleSource::new();
-    numaflow::source::Server::new(source_handle).start().await
+    deleteme_numaflow_rs::source::Server::new(source_handle)
+        .start()
+        .await
 }
 
 pub(crate) mod simple_source {
@@ -12,7 +14,7 @@ pub(crate) mod simple_source {
     use std::{collections::HashSet, sync::RwLock};
     use tokio::sync::mpsc::Sender;
 
-    use numaflow::source::{Message, Offset, SourceReadRequest, Sourcer};
+    use deleteme_numaflow_rs::source::{Message, Offset, SourceReadRequest, Sourcer};
 
     /// SimpleSource is a data generator which generates monotonically increasing offsets and data. It is a shared state which is protected using Locks
     /// or Atomics to provide concurrent access. Numaflow actually does not require concurrent access but we are forced to do this because the SDK

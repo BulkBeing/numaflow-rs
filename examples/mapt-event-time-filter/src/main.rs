@@ -1,6 +1,6 @@
+use deleteme_numaflow_rs::sourcetransform;
+use deleteme_numaflow_rs::sourcetransform::{Message, SourceTransformRequest};
 use filter_impl::filter_event_time;
-use numaflow::sourcetransform;
-use numaflow::sourcetransform::{Message, SourceTransformRequest};
 use std::error::Error;
 
 #[tokio::main]
@@ -21,7 +21,7 @@ impl sourcetransform::SourceTransformer for EventTimeFilter {
 
 mod filter_impl {
     use chrono::{TimeZone, Utc};
-    use numaflow::sourcetransform::{Message, SourceTransformRequest};
+    use deleteme_numaflow_rs::sourcetransform::{Message, SourceTransformRequest};
     /// Filters messages based on their event time.
     /// Returns different types of messages depending on the event time comparison.
     pub fn filter_event_time(input: SourceTransformRequest) -> Vec<Message> {
@@ -43,7 +43,7 @@ mod filter_impl {
 mod tests {
     use crate::filter_impl::filter_event_time;
     use chrono::{TimeZone, Utc};
-    use numaflow::sourcetransform::{Message, SourceTransformRequest};
+    use deleteme_numaflow_rs::sourcetransform::{Message, SourceTransformRequest};
     /// Tests that events from 2022 are tagged as within the year 2022.
     #[test]
     fn test_filter_event_time_should_return_within_year_2022() {

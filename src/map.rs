@@ -39,7 +39,7 @@ pub trait Mapper {
     /// Following is an example of a `cat` container that just copies the input to output.
     ///
     /// ```no_run
-    /// use numaflow::map;
+    /// use deleteme_numaflow_rs::map;
     ///
     /// #[tokio::main]
     /// async fn main() -> Result<(), Box<dyn std::error::Error + Send + Sync>> {
@@ -52,7 +52,7 @@ pub trait Mapper {
     /// #[tonic::async_trait]
     /// impl map::Mapper for Cat {
     ///     async fn map(&self, input: map::MapRequest) -> Vec<map::Message> {
-    ///       use numaflow::map::Message;
+    ///       use deleteme_numaflow_rs::map::Message;
     ///       let message=Message::new(input.value).keys(input.keys).tags(vec![]);
     ///         vec![message]
     ///     }
@@ -86,7 +86,7 @@ impl Message {
     /// # Examples
     ///
     /// ```
-    /// use numaflow::map::Message;
+    /// use deleteme_numaflow_rs::map::Message;
     /// let message = Message::new(vec![1, 2, 3, 4]);
     /// ```
     pub fn new(value: Vec<u8>) -> Self {
@@ -101,7 +101,7 @@ impl Message {
     /// # Examples
     ///
     /// ```
-    /// use numaflow::map::Message;
+    /// use deleteme_numaflow_rs::map::Message;
     /// let dropped_message = Message::message_to_drop();
     /// ```
     pub fn message_to_drop() -> Message {
@@ -121,7 +121,7 @@ impl Message {
     /// # Examples
     ///
     /// ```
-    ///  use numaflow::map::Message;
+    ///  use deleteme_numaflow_rs::map::Message;
     /// let message = Message::new(vec![1, 2, 3]).keys(vec!["key1".to_string(), "key2".to_string()]);
     /// ```
     pub fn keys(mut self, keys: Vec<String>) -> Self {
@@ -138,7 +138,7 @@ impl Message {
     /// # Examples
     ///
     /// ```
-    /// use numaflow::map::Message;
+    /// use deleteme_numaflow_rs::map::Message;
     /// let message = Message::new(vec![1, 2, 3]).tags(vec!["tag1".to_string(), "tag2".to_string()]);
     /// ```
     pub fn tags(mut self, tags: Vec<String>) -> Self {
@@ -155,7 +155,7 @@ impl Message {
     /// # Examples
     ///
     /// ```
-    /// use numaflow::map::Message;
+    /// use deleteme_numaflow_rs::map::Message;
     /// let message = Message::new(vec![1, 2, 3]).value(vec![4, 5, 6]);
     /// ```
     pub fn value(mut self, value: Vec<u8>) -> Self {

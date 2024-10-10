@@ -46,7 +46,7 @@ pub trait Sinker {
     /// A simple log sink.
     ///
     /// ```no_run
-    /// use numaflow::sink::{self, Response, SinkRequest};
+    /// use deleteme_numaflow_rs::sink::{self, Response, SinkRequest};
     /// use std::error::Error;
     ///
     /// struct Logger;

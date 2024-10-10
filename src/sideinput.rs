@@ -35,10 +35,10 @@ pub trait SideInputer {
     ///
     /// ```no_run
     /// use std::time::{SystemTime, UNIX_EPOCH};
-    /// use numaflow::sideinput::SideInputer;
+    /// use deleteme_numaflow_rs::sideinput::SideInputer;
     /// use tonic::{async_trait};
     /// use std::sync::Mutex;
-    /// use numaflow::sideinput;
+    /// use deleteme_numaflow_rs::sideinput;
     ///
     /// struct SideInputHandler {
     ///     counter: Mutex<u32>,

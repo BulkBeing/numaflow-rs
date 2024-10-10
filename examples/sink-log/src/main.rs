@@ -1,4 +1,4 @@
-use numaflow::sink::{self, Response, SinkRequest};
+use deleteme_numaflow_rs::sink::{self, Response, SinkRequest};
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error + Send + Sync>> {

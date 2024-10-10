@@ -1,5 +1,5 @@
-use numaflow::batchmap;
-use numaflow::batchmap::{BatchResponse, Datum, Message};
+use deleteme_numaflow_rs::batchmap;
+use deleteme_numaflow_rs::batchmap::{BatchResponse, Datum, Message};
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error + Send + Sync>> {

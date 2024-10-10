@@ -1,4 +1,4 @@
-use numaflow::sourcetransform;
+use deleteme_numaflow_rs::sourcetransform;
 
 /// A simple source transformer which assigns event time to the current time in utc.
 

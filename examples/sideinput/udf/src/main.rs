@@ -1,7 +1,7 @@
 use std::path::Path;
 
 use notify::{RecursiveMode, Result, Watcher};
-use numaflow::map::{MapRequest, Mapper, Message, Server};
+use deleteme_numaflow_rs::map::{MapRequest, Mapper, Message, Server};
 use tokio::spawn;
 use tonic::async_trait;
 

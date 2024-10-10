@@ -1,4 +1,4 @@
-use numaflow::reduce;
+use deleteme_numaflow_rs::reduce;
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error + Send + Sync>> {
@@ -8,8 +8,8 @@ async fn main() -> Result<(), Box<dyn std::error::Error + Send + Sync>> {
 }
 
 mod counter {
-    use numaflow::reduce::{Message, ReduceRequest};
-    use numaflow::reduce::{Metadata, Reducer};
+    use deleteme_numaflow_rs::reduce::{Message, ReduceRequest};
+    use deleteme_numaflow_rs::reduce::{Metadata, Reducer};
     use tokio::sync::mpsc::Receiver;
     use tonic::async_trait;
 
@@ -17,7 +17,7 @@ mod counter {
 
     pub(crate) struct CounterCreator {}
 
-    impl numaflow::reduce::ReducerCreator for CounterCreator {
+    impl deleteme_numaflow_rs::reduce::ReducerCreator for CounterCreator {
         type R = Counter;
 
         fn create(&self) -> Self::R {

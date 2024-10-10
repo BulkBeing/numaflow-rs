@@ -1,4 +1,4 @@
-use numaflow::sideinput::{self, SideInputer};
+use deleteme_numaflow_rs::sideinput::{self, SideInputer};
 use std::sync::Mutex;
 use std::time::{SystemTime, UNIX_EPOCH};
 

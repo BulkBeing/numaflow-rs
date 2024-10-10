@@ -44,7 +44,7 @@ pub trait BatchMapper {
     /// A simple batch map.
     ///
     /// ```no_run
-    /// use numaflow::batchmap::{self, BatchResponse, Datum, Message};
+    /// use deleteme_numaflow_rs::batchmap::{self, BatchResponse, Datum, Message};
     /// use std::error::Error;
     ///
     /// struct FlatMap;
@@ -128,7 +128,7 @@ impl Message {
     /// # Examples
     ///
     /// ```
-    /// use numaflow::batchmap::Message;
+    /// use deleteme_numaflow_rs::batchmap::Message;
     /// let message = Message::new(vec![1, 2, 3, 4]);
     /// ```
     pub fn new(value: Vec<u8>) -> Self {
@@ -143,7 +143,7 @@ impl Message {
     /// # Examples
     ///
     /// ```
-    /// use numaflow::batchmap::Message;
+    /// use deleteme_numaflow_rs::batchmap::Message;
     /// let dropped_message = Message::message_to_drop();
     /// ```
     pub fn message_to_drop() -> Message {
@@ -163,7 +163,7 @@ impl Message {
     /// # Examples
     ///
     /// ```
-    ///  use numaflow::batchmap::Message;
+    ///  use deleteme_numaflow_rs::batchmap::Message;
     /// let message = Message::new(vec![1, 2, 3]).keys(vec!["key1".to_string(), "key2".to_string()]);
     /// ```
     pub fn keys(mut self, keys: Vec<String>) -> Self {
@@ -180,7 +180,7 @@ impl Message {
     /// # Examples
     ///
     /// ```
-    /// use numaflow::batchmap::Message;
+    /// use deleteme_numaflow_rs::batchmap::Message;
     /// let message = Message::new(vec![1, 2, 3]).tags(vec!["tag1".to_string(), "tag2".to_string()]);
     /// ```
     pub fn tags(mut self, tags: Vec<String>) -> Self {
@@ -197,7 +197,7 @@ impl Message {
     /// # Examples
     ///
     /// ```
-    /// use numaflow::batchmap::Message;
+    /// use deleteme_numaflow_rs::batchmap::Message;
     /// let message = Message::new(vec![1, 2, 3]).value(vec![4, 5, 6]);
     /// ```
     pub fn value(mut self, value: Vec<u8>) -> Self {

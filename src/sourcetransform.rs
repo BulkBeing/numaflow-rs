@@ -42,7 +42,7 @@ pub trait SourceTransformer {
     /// #Example
     ///
     /// ```no_run
-    /// use numaflow::sourcetransform;
+    /// use deleteme_numaflow_rs::sourcetransform;
     /// use std::error::Error;
     ///
     /// // A simple source transformer which assigns event time to the current time in utc.
@@ -60,7 +60,7 @@ pub trait SourceTransformer {
     ///         &self,
     ///         input: sourcetransform::SourceTransformRequest,
     ///     ) -> Vec<sourcetransform::Message> {
-    ///     use numaflow::sourcetransform::Message;
+    ///     use deleteme_numaflow_rs::sourcetransform::Message;
     /// let message=Message::new(input.value, chrono::offset::Utc::now()).keys(input.keys).tags(vec![]);
     ///         vec![message]
     ///     }
@@ -98,7 +98,7 @@ impl Message {
     /// # Examples
     ///
     /// ```
-    /// use numaflow::sourcetransform::Message;
+    /// use deleteme_numaflow_rs::sourcetransform::Message;
     /// use chrono::Utc;
     /// let now = Utc::now();
     /// let message = Message::new(vec![1, 2, 3, 4], now);
@@ -121,7 +121,7 @@ impl Message {
     /// # Examples
     ///
     /// ```
-    /// use numaflow::sourcetransform::Message;
+    /// use deleteme_numaflow_rs::sourcetransform::Message;
     /// use chrono::Utc;
     /// let now = Utc::now();
     /// let dropped_message = Message::message_to_drop(now);
@@ -144,7 +144,7 @@ impl Message {
     /// # Examples
     ///
     /// ```
-    /// use numaflow::sourcetransform::Message;
+    /// use deleteme_numaflow_rs::sourcetransform::Message;
     /// use chrono::Utc;
     /// let now = Utc::now();
     /// let message = Message::new(vec![1, 2, 3], now).keys(vec!["key1".to_string(), "key2".to_string()]);
@@ -162,7 +162,7 @@ impl Message {
     /// # Examples
     ///
     /// ```
-    /// use numaflow::sourcetransform::Message;
+    /// use deleteme_numaflow_rs::sourcetransform::Message;
     /// use chrono::Utc;
     /// let now = Utc::now();
     /// let message = Message::new(vec![1, 2, 3], now).tags(vec!["tag1".to_string(), "tag2".to_string()]);
@@ -182,7 +182,7 @@ impl Message {
     /// # Examples
     ///
     /// ```
-    /// use numaflow::sourcetransform::Message;
+    /// use deleteme_numaflow_rs::sourcetransform::Message;
     /// use chrono::Utc;
     /// let now = Utc::now();
     /// let message = Message::new(vec![1, 2, 3], now).value(vec![4, 5, 6]);
