@@ -1,6 +1,6 @@
 [package]
-name = "numaflow"
-version = "0.1.1"
+name = "deleteme-numaflow-rs"
+version = "0.1.3"
 edition = "2021"
 rust-version = "1.80"
 description = "Rust SDK for Numaflow"
@@ -21,7 +21,7 @@ exclude = [
 
 
 [lib]
-name = "numaflow"
+name = "deleteme_numaflow_rs"
 path = "src/lib.rs"
 
 [dependencies]

@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 12
     # run workflow only on numaproj/numaflow-rs repository
-    if: ${{ github.repository }} == "numaproj/numaflow-rs"
+    if: ${{ github.repository }} == "BulkBeing/numaflow-rs"
     steps:
       - name: Check out code
         uses: actions/checkout@v4
